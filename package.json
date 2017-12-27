@@ -1,0 +1,25 @@
+{
+    "name": "debloat-bootstrap",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "server": "webpack-dev-server --port 9000 -w",
+        "build": "webpack",
+        "prod": "webpack -p --progress --colors"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "css-loader": "^0.28.7",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "node-sass": "^4.7.2",
+        "sass-loader": "^6.0.6",
+        "webpack": "^3.10.0",
+        "webpack-dev-server": "^2.9.7"
+    },
+    "dependencies": {
+        "bootstrap-sass": "^3.3.7"
+    }
+}
