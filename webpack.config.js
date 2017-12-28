@@ -4,14 +4,16 @@ var webpack = require('webpack'),
     purify = require('purifycss-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        app: './src/js/main.js'
+    },
     output: {
-        path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].bundle.js'
     },
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
+        contentBase: path.resolve(__dirname, "dist"),
         watchContentBase: true,
         port: 9000,
         compress: true
@@ -20,27 +22,32 @@ module.exports = {
     // Finds .scss files from path...then bundles in "bundle.css" into /dist/css folder
     module: {
         rules: [{
-            test: /.scss$/,
-            use: extractTextPlugin.extract({
-                use: [{
-                        loader: 'css-loader',
-                        options: {
-                            // If you are having trouble with urls not resolving add this setting.
-                            // See https://github.com/webpack-contrib/css-loader#url
-                            url: false,
-                            minimize: true,
-                            sourceMap: true
+                test: /\.scss$/,
+                use: extractTextPlugin.extract({
+                    use: [{
+                            loader: 'css-loader',
+                            options: {
+                                // If you are having trouble with urls not resolving add this setting.
+                                // See https://github.com/webpack-contrib/css-loader#url
+                                url: false,
+                                minimize: true,
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
                         }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    }
-                ]
-            })
-        }]
+                    ]
+                })
+            },
+            {
+                test: /\.css$/,
+                use: 'handlebars-loader'
+            }
+        ]
     },
     plugins: [
         new extractTextPlugin({
