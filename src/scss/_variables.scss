@@ -1,0 +1,36 @@
+// ---------------------------
+// Colors
+// ---------------------------
+$lt-blue: #C5EFF7 !default;
+$dk-blue: #81CFE0 !default;
+$purple: #E396DF !default;
+$black: #282828 !default;
+$gray: lighten($black, 20%);
+%main-nav-item-color {
+    color: $black;
+}
+
+// ---------------------------
+// Fonts
+// ---------------------------
+$primary-font: 'Playfair Display',
+serif !default;
+$secondary-font: 'Muli',
+sans-serif !default;
+$h1-size: 140px !default;
+$h2-size: 70px !default;
+$h3-size: 50px !default;
+$h4-size: 40px !default;
+$h5-size: 25px !default;
+$font-xl: 45px !default;
+$font-lg: 21px !default;
+$font-base: 16px !default;
+$font-sm: 14px !default;
+$font-xs: 13px !default;
+// ---------------------------
+// Media Queries
+// ---------------------------
+$xs: '500px';
+$sm: '768px';
+$md: '980px';
+$lg: '1200px';
