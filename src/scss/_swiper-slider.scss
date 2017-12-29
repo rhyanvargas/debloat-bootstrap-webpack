@@ -1,7 +1,8 @@
+// Swiper content
 .swiper-container {
     width: 100%;
-    height: 100%;
-    background: $gray;
+    height: 90vh;
+    background: red;
 }
 
 .swiper-slide {
@@ -23,10 +24,60 @@
     align-items: center;
 }
 
-.swiper-pagination-bullets {
-    right: 0;
-    width: 20px;
+.swiper-content {
+    width: 50%;
+}
+
+// Social icons
+.swiper__social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 30px;
+    width: auto;
+    z-index: 1;
+    &-icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 13px;
+        &>[class^="fa-"] {
+            font-size: 20px;
+        }
+    }
+    & [class^="col-"] {
+        padding: none;
+    }
+    & span:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Backgrounds
+.bg-stripes {
+    width: 50%;
     height: 100%;
+}
+
+.bg-stripe {
+    width: 100%;
+    &--lt-pink {
+        height: 100px;
+        background: lighten($pink, 20%);
+    }
+    &--pink {
+        height: 300px;
+        background: $pink;
+    }
+}
+
+// Pagination
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: initial;
+    padding-right: 30px;
 }
 
 .swiper-pagination-bullet {
@@ -44,16 +95,4 @@
 .swiper-pagination-bullet-active {
     color: #fff;
     background: #007aff;
-}
-
-.bg-stripe {
-    width: 100%;
-    &--lt-pink {
-        height: 100px;
-        background: lighten($pink, 20%);
-    }
-    &--pink {
-        height: 300px;
-        background: $pink;
-    }
 }

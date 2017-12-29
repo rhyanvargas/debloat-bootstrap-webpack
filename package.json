@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server -w",
+        "start": "webpack-dev-server --port 9000 -w",
         "build": "webpack",
         "prod": "webpack -p --progress --colors"
     },

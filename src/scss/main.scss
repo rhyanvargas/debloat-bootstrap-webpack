@@ -5,6 +5,7 @@
  */
 
 // Core variables and mixins
+@import "variables";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 // Reset and dependencies
@@ -50,9 +51,9 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 // -- Override
-@import "_variables";
-@import "_swiper-slider";
-@import "_icons";
-@import "_forms";
-@import "_navbar";
-@import "_navs";
+@import "layout";
+@import "swiper-slider";
+@import "icons";
+@import "forms";
+@import "navbar";
+@import "navs";
