@@ -1,12 +1,18 @@
-var webpack = require('webpack'),
+"use strict";
+
+const webpack = require('webpack'),
     path = require('path'),
     extractTextPlugin = require('extract-text-webpack-plugin'),
+    glob = require('glob'),
     purify = require('purifycss-webpack-plugin');
 
-module.exports = {
+let config = {
+
     entry: {
-        app: './src/js/main.js'
+        // Auto-detect all pages in directory
+        'myPages': glob.sync('./src/js/*.js')
     },
+
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
@@ -19,9 +25,14 @@ module.exports = {
         compress: true
 
     },
-    // Finds .scss files from path...then bundles in "bundle.css" into /dist/css folder
     module: {
         rules: [{
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            },
+            {
+                // scss and css loaders
                 test: /\.scss$/,
                 use: extractTextPlugin.extract({
                     use: [{
@@ -65,4 +76,6 @@ module.exports = {
             }
         })
     ]
-}
+};
+
+module.exports = config;
