@@ -15,7 +15,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: $headings-font-family;
+    font-family: $primary-font;
     font-weight: $headings-font-weight;
     line-height: $headings-line-height;
     color: $headings-color;
@@ -57,38 +57,45 @@ h6,
 
 h1,
 .h1 {
-    font-size: $font-size-h1;
+    font-size: $h1-size;
+    font-weight: 900;
+    &-lead {
+        font-family: $secondary-font;
+        font-weight: 200;
+        font-size: 50px;
+        color: $gray;
+    }
 }
 
 h2,
 .h2 {
-    font-size: $font-size-h2;
+    font-size: $h2-size;
 }
 
 h3,
 .h3 {
-    font-size: $font-size-h3;
+    font-size: $h3-size;
 }
 
 h4,
 .h4 {
-    font-size: $font-size-h4;
+    font-size: $h4-size;
 }
 
 h5,
 .h5 {
-    font-size: $font-size-h5;
+    font-size: $h5-size;
 }
 
-h6,
-.h6 {
-    font-size: $font-size-h6;
-}
-
+// h6,
+// .h6 {
+//     font-size: $h1-size;
+// }
 // Body text
 // -------------------------
 p {
     margin: 0 0 ($line-height-computed / 2);
+    font-family: $secondary-font;
 }
 
 .lead {

@@ -65,16 +65,16 @@ let config = {
             filename: "./css/bundle.css",
             disable: false,
             allChunks: true
-        }),
-        new purify({
-            basePath: __dirname,
-            paths: [
-                './dist/*.html'
-            ],
-            purifyOptions: {
-                minify: true
-            }
         })
+        // new purify({
+        //     basePath: __dirname,
+        //     paths: [
+        //         './dist/*.html'
+        //     ],
+        //     purifyOptions: {
+        //         minify: true
+        //     }
+        // })
     ]
 };
 

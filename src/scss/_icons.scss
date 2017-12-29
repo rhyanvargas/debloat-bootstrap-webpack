@@ -1,0 +1,28 @@
+// Social icons
+.social-icons {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    padding-left: 30px;
+    width: auto;
+    z-index: 1;
+    & span:last-child {
+        margin-bottom: 0;
+    }
+    & [class^="col-"] {
+        padding: none;
+    }
+}
+
+.social-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 13px;
+    &>a {
+        color: $link-social-color;
+    }
+    &>[class^="fa-"] {
+        font-size: 22px;
+    }
+}
