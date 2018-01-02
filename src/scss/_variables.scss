@@ -6,11 +6,12 @@ $dk-blue: #81CFE0 !default;
 $pink: #E396DF !default;
 $black: #282828 !default;
 $gray: lighten($black, 20%);
+$link-social-color: $black;
+//-- Placeholders
 %main-nav-item-color {
     color: $black;
 }
 
-$link-social-color: $black;
 // ---------------------------
 // Fonts
 // ---------------------------
@@ -28,6 +29,7 @@ $font-lg: 21px !default;
 $font-base: 16px !default;
 $font-sm: 14px !default;
 $font-xs: 13px !default;
+$button-size: 22px !default;
 // ---------------------------
 // Layout
 // ---------------------------

@@ -4,12 +4,14 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+//  Import google fonts
 @import url('https://fonts.googleapis.com/css?family=Muli:200,400,900,900i|Playfair+Display:400,700,700i,900');
 // Core variables and mixins
 @import "variables"; //Custom variables
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 // Reset and dependencies
+@import "base"; //Custom reset
 @import "bootstrap/normalize";
 @import "bootstrap/print";
 // @import "bootstrap/glyphicons";
@@ -51,7 +53,7 @@
 // Utility classes
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
-// -- Override
+// -- Overrides
 @import "mixins";
 @import "layout";
 @import "icons";

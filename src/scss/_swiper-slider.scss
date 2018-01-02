@@ -1,8 +1,10 @@
+//
+// Swiper Hero Slider
+// --------------------------------------------------
 // Swiper content
 .swiper-container {
     width: 100%;
     height: 90vh;
-    background: red;
 }
 
 .swiper-slide {
@@ -64,18 +66,31 @@
 }
 
 .swiper-pagination-bullet {
+    border-radius: 0;
     display: block;
     width: 20px;
     height: 20px;
-    text-align: center;
+    text-align: right;
     line-height: 20px;
     font-size: 12px;
     color: #000;
+    background: none;
     opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
+    position: relative; // Hide Text
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    &:before {
+        content: '\a0';
+        height: 2px;
+        width: 25px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background: $black;
+    }
+    &-active {
+        display: inline-block;
+        color: $black;
+    }
 }

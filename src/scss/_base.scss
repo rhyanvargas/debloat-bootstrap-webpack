@@ -1,0 +1,31 @@
+/*! _base.css v1.0 | MIT License | https://github.com/rhyanvargas/debloat-bootstrap-webpack/src/scss/_base.scss */
+
+//
+// 1. This reset gives you more flexibility than its predecessors — you can use
+// content-box //or padding-box (where supported) at will, without worrying about a
+// universal selector overriding your CSS.
+//
+html {
+    // 1
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+// HTML5 display definitions
+// ==========================================================================
+//
+// Make content readability better esprecially for the custom fonts
+//
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

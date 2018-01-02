@@ -1,9 +1,17 @@
-a.btn-custom {
-    display: block;
+//
+// Custom Button Styles
+// --------------------------------------------------
+.swiper-btn {
+    text-align: right;
+}
+
+.btn-custom {
+    border-bottom: 5px solid $black;
+    display: inline-block;
     color: $black;
     font-family: $primary-font;
     font-style: italic;
     font-weight: 800;
-    font-size: $font-lg;
-    border-bottom: 5px solid $black;
+    font-size: $button-size;
+    padding: 0;
 }
